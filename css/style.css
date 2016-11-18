@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Import fonts*/
+
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/911fonts.com_futuraextrablackitalic__-_911fonts.com-fonts-izkk-webfont.eot');
+    src: url('fonts/911fonts.com_futuraextrablackitalic__-_911fonts.com-fonts-izkk-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/911fonts.com_futuraextrablackitalic__-_911fonts.com-fonts-izkk-webfont.woff') format('woff'), url('fonts/911fonts.com_futuraextrablackitalic__-_911fonts.com-fonts-izkk-webfont.ttf') format('truetype'), url('fonts/911fonts.com_futuraextrablackitalic__-_911fonts.com-fonts-izkk-webfont.svg#webfont') format('svg');
+}
+
+@font-face {
+    font-family: 'akz';
+    src: url('fonts/akzidenzgrotesk_bq_extended_medium-webfont.eot');
+    src: url('fonts/akzidenzgrotesk_bq_extended_medium-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/akzidenzgrotesk_bq_extended_medium-webfont.woff') format('woff'), url('fonts/akzidenzgrotesk_bq_extended_medium-webfont.ttf') format('truetype'), url('fonts/akzidenzgrotesk_bq_extended_medium-webfont.svg#webfont') format('svg');
+}
+
+
+/*Typography*/
+
+body {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #000;
+    font-family: 'akz', sans-serif;
+}
+
+
+/*Links*/
+
+a {
+    color: #ff2222;
+    font-family: 'Shrikhand', cursive;
+}
+
+a:hover {
+    outline: none;
+    text-decoration: none;
+    color: #dd0000;
+}
+
+a:focus {
+    outline: none;
+    outline-offset: 0;
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+
+/*Lists*/
+
+ul {
+    list-style: none;
+}
+
+
+/*Headings*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+h1 {
+    color: #aa0000;
+}
+
+h2 {
+    font-size: 20px;
+    color: #252222;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'akz', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #252222;
+}
+
+h4 {
+    text-align: Left;
+    font-family: 'Futura', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+h5 {
+    text-align: Left;
+    font-family: 'akz', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+p1 {
+    font-family: 'akz', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #252222;
+}
+
+
+/*Top header picture area*/
+
+
+/*to select id element use #*/
+
+#top {
+    color: lightgray;
+    background-color: aqua;
+    font-family: 'Open Sans', sans-serif;
+    /*The following two line is to add a background image to the top header area*/
+    background: url(../img/header.jpg) no-repeat top center;
+    background-size: cover;
+    /*The padding bottom and top setting are expanding the height of header area*/
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+#top img {
+    width: 100%;
+    object-fit: contain;
+    align-content: center;
+}
+
+
+/* end of Top Header area*/
+
+
+/* use . to refer to class name*/
+
+.lightblue {
+    background-color: #e6e6e6
+}
+
+
+/*about section*/
+
+#about {
+    padding-top: 10px;
+    padding-bottom: 30px
+}
+
+
+/*portfolio*/
+
+
+/*    set the vertical space between the thumbnails, if using offset column class, the margin setting on left and right should be disabled. So change the following code to margin-bottom: 30px*/
+
+#popular .popular-item {
+    margin: 0 0 15px;
+    /*    padding: 0;*/
+    /*    enable the padding equals 0 setting to create a seamless tile layouts*/
+}
+
+
+/*set the portflio link a as a block and center to the portfolio item container*/
+
+#popular .popular-item .popular-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+/*set the caption in default mode*/
+
+#popular .popular-item .popular-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.9);
+    /*    adjust the color of roll over effect*/
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+
+/*set the opacity of caption*/
+
+#popular .popular-item .popular-link .caption:hover {
+    opacity: 1;
+}
+
+
+/*set the caption content, such as icon or title*/
+
+#popular .popular-item .popular-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    /* adjust the top value if you want to show the name of title*/
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: top;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/*set the top space for the icon*/
+
+#popular .popular-item .popular-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+
+/*set the margin for h3 and h4, if they are used inside the caption area*/
+
+#popular .popular-item .popular-link .caption .caption-content h3,
+#popular .popular-item .popular-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+#popular * {
+    z-index: 2;
+}
+
+#popular #mostpopu {
+    background-color: #fff500
+}
+
+
+/*modal*/
+
+.popular-modal .modal-content {
+    /*Change the paragraph font color*/
+    color: black;
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /*Change the background-color*/
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.popular-modal .modal-content h2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 3em;
+}
+
+.popular-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.popular-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.popular-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popular-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.popular-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    /*Line color*/
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.popular-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    /*Line color*/
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.popular-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
